@@ -1,12 +1,12 @@
-function map(myArray, funcOper){
+function map(myArray, funct){
     let newArr = []
     myArray.forEach(element => {
-        newArr.push(funcOper(element))
+        newArr.push(funct(element))
     });
     return newArr
 }
 
-function reduce(myArray, funcOper, startPt) {
+function reduce(myArray, funct, startPt) {
     let total;
     let i; 
 
@@ -19,7 +19,7 @@ function reduce(myArray, funcOper, startPt) {
     };
 
     for( ; i < myArray.length; i++) {
-        total = funcOper(myArray[i], total);
+        total = funct(myArray[i], total);
     };
     return total;
 } 
